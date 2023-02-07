@@ -10,14 +10,16 @@ import com.example.schoolmanagemntsw.Repository.TeacherRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 @RequiredArgsConstructor
 public class AddressService {
 
     private final AddressRepository addressRepository;
     private final TeacherRepository teacherRepository;
-    
-     public List<Address> getAddress(){
+
+    public List<Address> getAddress(){
         return addressRepository.findAll();
     }
     public void addAddress(AddressDTO addressDTO){
