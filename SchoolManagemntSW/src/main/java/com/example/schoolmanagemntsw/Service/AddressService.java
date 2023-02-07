@@ -16,6 +16,10 @@ public class AddressService {
 
     private final AddressRepository addressRepository;
     private final TeacherRepository teacherRepository;
+    
+     public List<Teacher> getTeacher(){
+        return teacherRepository.findAll();
+    }
     public void addAddress(AddressDTO addressDTO){
         Teacher teacher=teacherRepository.findTeacherById(addressDTO.getTeacher_id());
         if(teacher==null){
