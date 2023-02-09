@@ -6,6 +6,8 @@ import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import lombok.*;
 
+import java.util.Set;
+
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
@@ -22,5 +24,7 @@ public class Course {
     @JsonIgnore
     private Teacher teacher;
 
+    @ManyToMany(mappedBy = "courses")
+    private Set<Student> students;
 
 }
