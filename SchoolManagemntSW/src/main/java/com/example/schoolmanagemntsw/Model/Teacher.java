@@ -34,7 +34,7 @@ public class Teacher {
     @PrimaryKeyJoinColumn
     private Address address;
 
-    @OneToMany(cascade = CascadeType.ALL,mappedBy ="Teacher" )
+    @OneToMany(cascade = CascadeType.ALL,mappedBy ="teacher" )
     private Set<Course> courses;
 
 
